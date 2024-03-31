@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+    
+    var body=document.body
+    body.style.backgroundColor="darkslategrey"
+
+
+
+    var div=document.createElement("div");
+div.style.border="2px solid black";
+div.style.height="200px";
+div.style.width="300px";
+div.style.backgroundColor="yellowgreen";
+div.style.marginLeft="600px";
+div.style.marginTop="200px";
+div.style.borderRadius="10px"
+document.body.appendChild(div);
+
+
+var btn=document.createElement("button");
+btn.innerHTML="<b>Generate OTP</b>";
+btn.style.marginTop="120px";
+btn.style.marginLeft="70px";
+btn.style.backgroundColor="magenta";
+btn.style.color="white";
+btn.style.fontSize="20px";
+btn.style.cursor="pointer"
+div.appendChild(btn);
+btn.onclick=change;
+
+
+var otpDisplay = document.createElement("p"); 
+otpDisplay.style.marginTop = "-100px"; 
+otpDisplay.style.marginLeft="115px";
+otpDisplay.style.fontSize="25px";
+otpDisplay.style.fontWeight="bold";
+div.appendChild(otpDisplay);
+
+function change() {
+    
+    var randomOTP = Math.floor(100000 + Math.random() * 900000); 
+    otpDisplay.innerText =  randomOTP;
+}
+
+    </script>
+</body>
+</html>
